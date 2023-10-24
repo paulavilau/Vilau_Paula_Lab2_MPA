@@ -14,7 +14,7 @@ namespace Vilau_Paula_Lab2.Models
         public string LastName { get; set; }
 
         [NotMapped]
-        public string FullName => FirstName + " "+ LastName;
+        public string FullName => FirstName + " " + LastName;
         public ICollection<Book>? Books { get; set; }
     }
 }
