@@ -56,7 +56,6 @@ namespace Vilau_Paula_Lab2.Controllers
                 books = books.Where(s => s.Title.Contains(searchString));
             }
 
-            // Join cu tabela autori
             books = books.Include(b => b.Author);
 
             switch (sortOrder)
@@ -74,7 +73,7 @@ namespace Vilau_Paula_Lab2.Controllers
                     books = books.OrderBy(b => b.Title);
                     break;
             }
-            int pageSize = 2;
+            int pageSize = 4;
             return View(await PaginatedList<Book>.CreateAsync(books.AsNoTracking(), pageNumber ??
            1, pageSize));
         }
