@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Vilau_Paula_Lab2.Data;
-using Vilau_Paula_Lab2.Models;
+using LibraryModel.Models;
 
 namespace Vilau_Paula_Lab2.Controllers
 {

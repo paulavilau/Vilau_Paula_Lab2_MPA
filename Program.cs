@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Vilau_Paula_Lab2.Data;
+using Vilau_Paula_Lab2.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

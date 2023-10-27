@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Vilau_Paula_Lab2.Data;
+using LibraryModel.Data;
 
 #nullable disable
 
-namespace Vilau_Paula_Lab2.Migrations
+namespace LibraryModel.Migrations
 {
     [DbContext(typeof(LibraryContext))]
     [Migration("20231025140137_ExtendedModel")]

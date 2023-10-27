@@ -10,7 +10,7 @@ using Vilau_Paula_Lab2.Data;
 
 namespace Vilau_Paula_Lab2.Migrations
 {
-    [DbContext(typeof(LibraryContext))]
+    [DbContext(typeof(Data.LibraryContext))]
     partial class LibraryContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

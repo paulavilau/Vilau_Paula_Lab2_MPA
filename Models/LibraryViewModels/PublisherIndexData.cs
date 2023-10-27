@@ -1,4 +1,6 @@
-﻿namespace Vilau_Paula_Lab2.Models.LibraryViewModels
+﻿using LibraryModel.Models;
+
+namespace Vilau_Paula_Lab2.Models.LibraryViewModels
 {
     public class PublisherIndexData
     { 

@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Vilau_Paula_Lab2.Models;
+using LibraryModel.Models;
 
 namespace Vilau_Paula_Lab2.Data
 {
@@ -12,6 +12,7 @@ namespace Vilau_Paula_Lab2.Data
         public DbSet<Author> Authors { get; set; }
         public DbSet<Publisher> Publishers { get; set; }
         public DbSet<PublishedBook> PublishedBooks { get; set; }
+        public DbSet<City> Cities { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) 
         { 
@@ -22,6 +23,7 @@ namespace Vilau_Paula_Lab2.Data
             modelBuilder.Entity<Publisher>().ToTable("Publisher");
             modelBuilder.Entity<PublishedBook>().ToTable("PublishedBook");
             modelBuilder.Entity<PublishedBook>().HasKey(c => new { c.BookID, c.PublisherID });//configureaza cheia primara compusa
+            modelBuilder.Entity<City>().ToTable("City");
         }
 
     }

@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Security.Policy;
-using Vilau_Paula_Lab2.Models;
+using LibraryModel.Models;
 
 namespace Vilau_Paula_Lab2.Data
 {
@@ -15,39 +15,39 @@ namespace Vilau_Paula_Lab2.Data
                       return; // BD a fost creata anterior
                   }
 
-                  context.Books.AddRange(
-                      new Book { Title = "Baltagul", Price = Decimal.Parse("22") },
-                      new Book { Title = "Enigma Otiliei", Price = Decimal.Parse("18") },
-                      new Book { Title = "Maytrei", Price = Decimal.Parse("27") },
-                      new Book { Title = "De veghe in lanul de secara", Price = Decimal.Parse("27") },
-                      new Book { Title = "Panza de paianjen", Price = Decimal.Parse("27") },
-                      new Book { Title = "Fata de hartie", Price = Decimal.Parse("27") }
-                  );
+                context.Books.AddRange(
+                    new Book { Title = "Baltagul", Price = Decimal.Parse("22") },
+                    new Book { Title = "Enigma Otiliei", Price = Decimal.Parse("18") },
+                    new Book { Title = "Maytrei", Price = Decimal.Parse("27") },
+                    new Book { Title = "De veghe in lanul de secara", Price = Decimal.Parse("27") },
+                    new Book { Title = "Panza de paianjen", Price = Decimal.Parse("27") },
+                    new Book { Title = "Fata de hartie", Price = Decimal.Parse("27") }
+                );
 
-                  context.Customers.AddRange(
-                      new Customer { Name = "Popescu Marcela", Adress = "Str. Plopilor, nr. 24", BirthDate = DateTime.Parse("1979-09-01") },
-                      new Customer { Name = "Mihailescu Cornel", Adress = "Str. Bucuresti, nr. 45, ap. 2", BirthDate = DateTime.Parse("1969-07-08") }
-                  );
+                context.Customers.AddRange(
+                    new Customer { Name = "Popescu Marcela", Adress = "Str. Plopilor, nr. 24", BirthDate = DateTime.Parse("1979-09-01") },
+                    new Customer { Name = "Mihailescu Cornel", Adress = "Str. Bucuresti, nr. 45, ap. 2", BirthDate = DateTime.Parse("1969-07-08") }
+                );
 
-                  context.Authors.AddRange(
-                      new Author { FirstName = "Mihail", LastName = "Sadoveanu" },
-                      new Author { FirstName = "Camil", LastName = "Petrescu" },
-                      new Author { FirstName = "J.D.", LastName = "Salinger" },
-                      new Author { FirstName = "Guillaume", LastName = " Musso" },
-                      new Author { FirstName = "Cella", LastName = "Serghi" },
-                      new Author { FirstName = "Mircea", LastName = "Eliade" }
-                      );
+                context.Authors.AddRange(
+                    new Author { FirstName = "Mihail", LastName = "Sadoveanu" },
+                    new Author { FirstName = "Camil", LastName = "Petrescu" },
+                    new Author { FirstName = "J.D.", LastName = "Salinger" },
+                    new Author { FirstName = "Guillaume", LastName = " Musso" },
+                    new Author { FirstName = "Cella", LastName = "Serghi" },
+                    new Author { FirstName = "Mircea", LastName = "Eliade" }
+                    );
 
-                  context.SaveChanges();
+                context.SaveChanges();
 
-                  var orders = new Order[]
+                var orders = new Order[]
                    {
-                       new Order{BookID=9, CustomerID=1, OrderDate=DateTime.Parse("2021-02-25")},
-                       new Order{BookID=10, CustomerID=2, OrderDate=DateTime.Parse("2021-09-28")},
-                       new Order{BookID=11, CustomerID=1, OrderDate=DateTime.Parse("2021-10-28")},
-                       new Order{BookID=12, CustomerID=2, OrderDate=DateTime.Parse("2021-09-28")},
-                       new Order{BookID=20, CustomerID=1, OrderDate=DateTime.Parse("2021-09-28")},
-                       new Order{BookID=21, CustomerID=2, OrderDate=DateTime.Parse("2021-10-28")},
+                       new Order{BookID=19, CustomerID=4, OrderDate=DateTime.Parse("2021-02-25")},
+                       new Order{BookID=20, CustomerID=5, OrderDate=DateTime.Parse("2021-09-28")},
+                       new Order{BookID=21, CustomerID=4, OrderDate=DateTime.Parse("2021-10-28")},
+                       new Order{BookID=22, CustomerID=5, OrderDate=DateTime.Parse("2021-09-28")},
+                       new Order{BookID=23, CustomerID=4, OrderDate=DateTime.Parse("2021-09-28")},
+                       new Order{BookID=24, CustomerID=5, OrderDate=DateTime.Parse("2021-10-28")},
                    };
 
                   foreach (Order e in orders)
@@ -56,14 +56,14 @@ namespace Vilau_Paula_Lab2.Data
                   }
                  
 
-                var publishers = new Models.Publisher[]
+                var publishers = new LibraryModel.Models.Publisher[]
                 {
-                    new Models.Publisher{PublisherName="Humanitas", Adress="Str. Aviatorilor, nr. 40,Bucuresti"},
-                    new Models.Publisher{PublisherName="Nemira", Adress="Str. Plopilor, nr. 35,Ploiesti"},
-                    new Models.Publisher{PublisherName="Paralela 45", Adress="Str. Cascadelor, nr.22, Cluj-Napoca"},
+                    new LibraryModel.Models.Publisher{PublisherName="Humanitas", Adress="Str. Aviatorilor, nr. 40,Bucuresti"},
+                    new LibraryModel.Models.Publisher{PublisherName="Nemira", Adress="Str. Plopilor, nr. 35,Ploiesti"},
+                    new LibraryModel.Models.Publisher{PublisherName="Paralela 45", Adress="Str. Cascadelor, nr.22, Cluj-Napoca"},
                 };
 
-                foreach (Models.Publisher p in publishers)
+                foreach (LibraryModel.Models.Publisher p in publishers)
                 {
                     context.Publishers.Add(p);
                 }
@@ -72,7 +72,7 @@ namespace Vilau_Paula_Lab2.Data
                   
                 
                 var books = context.Books;
-                var publishedbooks = new PublishedBook[]
+                /*var publishedbooks = new PublishedBook[]
                 {
                     new PublishedBook {
                         BookID = books.Single(c => c.Title == "Maytrei" ).ID,
@@ -106,6 +106,7 @@ namespace Vilau_Paula_Lab2.Data
                 }
 
                 context.SaveChanges();
+                  */
             }
             }
         }

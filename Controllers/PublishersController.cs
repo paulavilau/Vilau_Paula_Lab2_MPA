@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Vilau_Paula_Lab2.Data;
-using Vilau_Paula_Lab2.Models;
+using LibraryModel.Models;
 using Vilau_Paula_Lab2.Models.LibraryViewModels;
 
 namespace Vilau_Paula_Lab2.Controllers
@@ -48,7 +48,7 @@ namespace Vilau_Paula_Lab2.Controllers
             if (id != null)
             {
                 ViewData["PublisherID"] = id.Value;
-                Models.Publisher publisher = viewModel.Publishers.Where(i => i.ID == id.Value).Single();
+                LibraryModel.Models.Publisher publisher = viewModel.Publishers.Where(i => i.ID == id.Value).Single();
                 ViewData["PublisherName"] = publisher.PublisherName;
                 viewModel.Books = publisher.PublishedBooks.Select(s => s.Book);
             }
@@ -93,7 +93,7 @@ namespace Vilau_Paula_Lab2.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,PublisherName,Adress")] Models.Publisher publisher)
+        public async Task<IActionResult> Create([Bind("ID,PublisherName,Adress")] LibraryModel.Models.Publisher publisher)
         {
             if (ModelState.IsValid)
             {
@@ -139,7 +139,7 @@ namespace Vilau_Paula_Lab2.Controllers
             return View(publisher);
 
         }
-        private void PopulatePublishedBookData(Models.Publisher publisher)
+        private void PopulatePublishedBookData(LibraryModel.Models.Publisher publisher)
         {
             var allBooks = _context.Books;
             var publisherBooks = new HashSet<int?>(publisher.PublishedBooks.Select(c => c.BookID));
@@ -206,7 +206,7 @@ namespace Vilau_Paula_Lab2.Controllers
             .Include(i => i.PublishedBooks)
             .ThenInclude(i => i.Book)
             .FirstOrDefaultAsync(m => m.ID == id);
-            if (await TryUpdateModelAsync<Models.Publisher>(
+            if (await TryUpdateModelAsync<LibraryModel.Models.Publisher>(
             publisherToUpdate,
             "",
             i => i.PublisherName, i => i.Adress))
@@ -229,7 +229,7 @@ namespace Vilau_Paula_Lab2.Controllers
             return View(publisherToUpdate);
         }
 
-        private void UpdatePublishedBooks(string[] selectedBooks, Models.Publisher publisherToUpdate)
+        private void UpdatePublishedBooks(string[] selectedBooks, LibraryModel.Models.Publisher publisherToUpdate)
         {
             if (selectedBooks == null)
             {
