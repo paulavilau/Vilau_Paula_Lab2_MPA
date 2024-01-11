@@ -38,7 +38,7 @@ namespace Vilau_Paula_Lab2.Controllers
             .ThenInclude(i => i.Orders)
             .ThenInclude(i => i.Customer)
 
-            .Include(i => i.PublishedBooks) // Include the Author for each Book
+            .Include(i => i.PublishedBooks) // Include the Author for each Book      
             .ThenInclude(i => i.Book.Author)
 
             .AsNoTracking()

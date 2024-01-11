@@ -592,3 +592,4 @@ D:\Master\An1\MPA\Lab\Vilau_Paula_Lab7\LibraryWebAPI\obj\Debug\net6.0\refint\Lib
 D:\Master\An1\MPA\Lab\Vilau_Paula_Lab7\LibraryWebAPI\obj\Debug\net6.0\LibraryWebAPI.pdb
 D:\Master\An1\MPA\Lab\Vilau_Paula_Lab7\LibraryWebAPI\obj\Debug\net6.0\LibraryWebAPI.genruntimeconfig.cache
 D:\Master\An1\MPA\Lab\Vilau_Paula_Lab7\LibraryWebAPI\obj\Debug\net6.0\ref\LibraryWebAPI.dll
+D:\Master\An1\MPA\Lab\Vilau_Paula_Lab7\LibraryWebAPI\obj\Debug\net6.0\LibraryWebAPI.sourcelink.json

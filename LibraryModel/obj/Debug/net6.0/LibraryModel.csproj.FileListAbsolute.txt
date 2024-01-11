@@ -26,3 +26,4 @@ D:\Master\An1\MPA\Lab\Vilau_Paula_Lab7\LibraryModel\obj\Debug\net6.0\refint\Libr
 D:\Master\An1\MPA\Lab\Vilau_Paula_Lab7\LibraryModel\obj\Debug\net6.0\LibraryModel.pdb
 D:\Master\An1\MPA\Lab\Vilau_Paula_Lab7\LibraryModel\obj\Debug\net6.0\LibraryModel.genruntimeconfig.cache
 D:\Master\An1\MPA\Lab\Vilau_Paula_Lab7\LibraryModel\obj\Debug\net6.0\ref\LibraryModel.dll
+D:\Master\An1\MPA\Lab\Vilau_Paula_Lab7\LibraryModel\obj\Debug\net6.0\LibraryModel.sourcelink.json
