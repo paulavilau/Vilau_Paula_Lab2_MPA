@@ -8,9 +8,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Vilau_Paula_Lab2.Data;
 using LibraryModel.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Vilau_Paula_Lab2.Controllers
 {
+    [Authorize(Roles = "Employee")]
     public class BooksController : Controller
     {
         private readonly LibraryContext _context;
@@ -27,6 +29,7 @@ namespace Vilau_Paula_Lab2.Controllers
             return View(await libraryContext.ToListAsync());
         }*/
 
+        [AllowAnonymous]
         public async Task<IActionResult> Index(
             string sortOrder,
             string currentFilter,
@@ -79,6 +82,7 @@ namespace Vilau_Paula_Lab2.Controllers
         }
 
         // GET: Books/Details/5
+        [AllowAnonymous]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Books == null)

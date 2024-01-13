@@ -9,9 +9,11 @@ using Microsoft.EntityFrameworkCore;
 using Vilau_Paula_Lab2.Data;
 using LibraryModel.Models;
 using Vilau_Paula_Lab2.Models.LibraryViewModels;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Vilau_Paula_Lab2.Controllers
 {
+    [Authorize(Policy = "OnlySales")]
     public class PublishersController : Controller
     {
         private readonly LibraryContext _context;
