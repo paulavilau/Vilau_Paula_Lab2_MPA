@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vilau_Paula_Lab2", "Vilau_P
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryModel", "LibraryModel\LibraryModel.csproj", "{A4B545F3-5F68-4187-B7CA-30D088125F7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcCustomersService", "..\GrpcCustomersService\GrpcCustomersService.csproj", "{37EBE21B-8380-4775-B236-47DC2EA172D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcCustomersService", "GrpcCustomersService\GrpcCustomersService.csproj", "{AEF8F9FF-BC7D-4D67-8405-1D62443AF5D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{A4B545F3-5F68-4187-B7CA-30D088125F7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4B545F3-5F68-4187-B7CA-30D088125F7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4B545F3-5F68-4187-B7CA-30D088125F7F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{37EBE21B-8380-4775-B236-47DC2EA172D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{37EBE21B-8380-4775-B236-47DC2EA172D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{37EBE21B-8380-4775-B236-47DC2EA172D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{37EBE21B-8380-4775-B236-47DC2EA172D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEF8F9FF-BC7D-4D67-8405-1D62443AF5D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEF8F9FF-BC7D-4D67-8405-1D62443AF5D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEF8F9FF-BC7D-4D67-8405-1D62443AF5D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEF8F9FF-BC7D-4D67-8405-1D62443AF5D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
